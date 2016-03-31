@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private Button simpleRecyclerView;
+    private Button recyclerViewImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,SimpleRecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        recyclerViewImage = (Button) findViewById(R.id.btnRecyclerImage);
+        recyclerViewImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,RecyclerViewImageActivity.class);
                 startActivity(intent);
             }
         });
